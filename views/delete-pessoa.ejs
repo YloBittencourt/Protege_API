@@ -1,0 +1,25 @@
+<%- include("head.ejs"); %> <div class="card shadow-sm bg-light">
+    <div class="card-header bg-danger text-white">
+        <h4 class="mb-0">Confirmar Exclusão de Pessoa</h4>
+    </div>
+    <div class="card-body">
+        <p class="fs-5">Você tem certeza que deseja excluir a seguinte pessoa?</p>
+
+        <ul class="list-group list-group-flush mb-3">
+            <li class="list-group-item"><strong>ID:</strong> <%= dados.IdPessoa %></li>
+            <li class="list-group-item"><strong>Nome:</strong> <%= dados.Nome %></li>
+            <li class="list-group-item"><strong>CPF:</strong> <%= dados.CPF %></li>
+            <li class="list-group-item"><strong>Email:</strong> <%= dados.Email %></li>
+             <li class="list-group-item"><strong>Cargo:</strong> <%= dados.Cargo %></li>
+              <li class="list-group-item"><strong>Empresa:</strong> <%= dados.Empresa %></li>
+        </ul>
+
+        <form action="/delete-pessoa/<%= dados.IdPessoa %>" method="post">
+            <button type="submit" class="btn btn-danger btn-sm">Confirmar Exclusão</button>
+            <a href="/pessoas" class="btn btn-outline-secondary btn-sm">Voltar</a>
+        </form>
+    </div>
+</div>
+
+</main> </body>
+</html>

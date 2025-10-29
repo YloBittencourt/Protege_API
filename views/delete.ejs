@@ -1,0 +1,22 @@
+<%- include("head.ejs"); %> <div class="card shadow-sm bg-light">
+    <div class="card-header bg-danger text-white">
+        <h4 class="mb-0">Confirmar Exclusão</h4>
+    </div>
+    <div class="card-body">
+        <p class="fs-5">Você tem certeza que deseja excluir o seguinte registro de Procedimento Clínico?</p>
+
+        <ul class="list-group list-group-flush mb-3">
+            <li class="list-group-item"><strong>ID Procedimento:</strong> <%= dados.IdProcedimento %></li>
+            <li class="list-group-item"><strong>Descrição Procedimento:</strong> <%= dados.ProcedimentoDescricao %></li>
+            <li class="list-group-item"><strong>Enfermidade Associada:</strong> <%= dados.EnfermidadeDescricao %> (CID10: <%= dados.CID10 %>)</li>
+        </ul>
+
+        <form action="/delete/<%= dados.IdProcedimento %>" method="post">
+            <button type="submit" class="btn btn-danger btn-sm">Confirmar Exclusão</button>
+            <a href="/" class="btn btn-outline-secondary btn-sm">Voltar</a>
+        </form>
+    </div>
+</div>
+
+</main> </body>
+</html>

@@ -1,0 +1,39 @@
+<%- include("head.ejs"); %> <div class="card shadow-sm">
+    <div class="card-header">
+        <h4 class="mb-0">Inserir Nova Enfermidade e Procedimento Associado</h4>
+    </div>
+    <div class="card-body">
+        <form action="/inserir" method="post">
+
+            <h5>Dados da Enfermidade</h5>
+            <div class="mb-3">
+                <label for="cid10" class="form-label">CID10:</label>
+                <input type="text" class="form-control form-control-sm" id="cid10" name="cid10" required>
+            </div>
+            <div class="mb-3">
+                <label for="enfermidadeDescricao" class="form-label">Descrição da Enfermidade:</label>
+                <input type="text" class="form-control form-control-sm" id="enfermidadeDescricao" name="enfermidadeDescricao" required>
+            </div>
+             <div class="mb-3">
+                <label for="sintomas" class="form-label">Sintomas:</label>
+                <textarea class="form-control form-control-sm" id="sintomas" name="sintomas" rows="3"></textarea>
+            </div>
+             <div class="mb-3">
+                <label for="gravidade" class="form-label">Gravidade:</label>
+                <input type="text" class="form-control form-control-sm" id="gravidade" name="gravidade">
+            </div>
+
+            <hr> <h5>Dados do Procedimento Clínico Associado</h5>
+            <div class="mb-3">
+                <label for="procedimentoDescricao" class="form-label">Descrição do Procedimento:</label>
+                <input type="text" class="form-control form-control-sm" id="procedimentoDescricao" name="procedimentoDescricao" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-sm">Inserir</button>
+            <a href="/" class="btn btn-outline-secondary btn-sm">Voltar</a>
+        </form>
+    </div>
+</div>
+
+</main> </body>
+</html>
