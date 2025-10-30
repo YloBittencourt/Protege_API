@@ -29,7 +29,9 @@ A aplicação web permite:
     * `package-lock.json`: Arquivo gerado pelo npm que trava as versões exatas das dependências.
     * `README.md`: Este arquivo, explicando o projeto.
     * `localhost.sql` (ou `SQL_bd_protege_v6.sql` v4): Script SQL completo para criar o banco de dados `BD_PROTEGE_V6`, suas tabelas (com correções de estrutura e tipos), popular a tabela `grupo_ciap` e realizar a carga inicial de dados nas tabelas `Enfermidade`, `Procedimentoclinico`, `Caso_Clinico` e `Pessoa`.
-* **`/node_modules/`:** Pasta criada pelo `npm install`, contendo o código das bibliotecas de dependência (Express, EJS, MySQL, etc.). *Geralmente não é enviada para o GitHub (configurado via `.gitignore`).*
+    
+* **`/node_modules/`:** Pasta criada pelo `npm install`, contendo o código das bibliotecas de dependência (Express, EJS, MySQL, etc.).
+
 * **`/public/`:** Pasta para arquivos estáticos (acessíveis diretamente pelo navegador).
     * `logo.png`: Arquivo de imagem da logo da aplicação.
 * **`/views/`:** Pasta contendo os arquivos de template EJS, que geram o HTML exibido no navegador.
